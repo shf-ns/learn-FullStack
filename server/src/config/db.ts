@@ -20,20 +20,23 @@ const pool = mysql.createPool({
 
 export const data: () => Promise<
   | {
-      results: mysql.QueryResult;
-      fields: mysql.FieldPacket[];
+      documents: mysql.QueryResult;
+      sites: mysql.QueryResult;
     }
   | undefined
 > = async () => {
   try {
     // execute 将在内部调用 prepare 和 query
-    const [results, fields] = await pool.execute(
+    const [documents] = await pool.execute(
       "SELECT site.* FROM category, site WHERE category.id = site.category_id AND category_id = 1",
     );
-    console.log(results); // 结果集
-    console.log(fields); // 额外的元数据（如果有的话）
+    const [sites] = await pool.execute(
+      "SELECT site.* FROM category, site WHERE category.id = site.category_id AND category_id = 2",
+    );
+    console.log(documents);
+    console.log(sites);
 
-    return { results, fields };
+    return { documents, sites };
   } catch (err) {
     console.log(err);
   }

@@ -18,8 +18,8 @@ app.use(
 app.use(express.json());
 
 app.get("/api", async (req: Request, res: Response) => {
-  const { results, fields }: any = await data();
-  res.json({ message: "Hello World!", results, fields });
+  const { documents, sites }: any = await data();
+  res.json({ documents, sites });
 });
 
 app.listen(PORT, () => {
