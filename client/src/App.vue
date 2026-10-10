@@ -1,14 +1,21 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 
-const res: () => Promise<Response> = async () => {
-  return await fetch('/api', {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' }
-  })
+const fetchData = async () => {
+  try {
+    const response = await fetch('/api', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    })
+    const data = await response.json()
+    console.log('接收到的数据:', data)
+  } catch (error) {
+    console.error('请求失败:', error)
+  }
 }
-const s = async () => await res().then((res) => res.json())
-
-console.log(s())
+onMounted(() => {
+  fetchData()
+})
 </script>
 
 <template>

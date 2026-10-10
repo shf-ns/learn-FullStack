@@ -1,5 +1,6 @@
 import express, { type Express, type Request, type Response } from "express";
 import cors from "cors";
+import { data } from "./config/db.ts";
 
 // 解析前端发来的 JSON 请求体
 const app: Express = express();
@@ -16,8 +17,9 @@ app.use(
 
 app.use(express.json());
 
-app.get("/api", (req: Request, res: Response) => {
-  res.json({ message: "Hello World!" });
+app.get("/api", async (req: Request, res: Response) => {
+  const { results, fields }: any = await data();
+  res.json({ message: "Hello World!", results, fields });
 });
 
 app.listen(PORT, () => {
