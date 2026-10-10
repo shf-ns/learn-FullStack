@@ -20,8 +20,10 @@
   },
   "type": "module",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.4",
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "typescript": "^7.0.2"
   }
