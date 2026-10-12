@@ -1,6 +1,6 @@
-import express, { type Express, type Request, type Response } from "express";
+import express, { type Express } from "express";
 import cors from "cors";
-import { data } from "./config/db.ts";
+import productRouter from "./routers/productRouter.ts";
 
 // 解析前端发来的 JSON 请求体
 const app: Express = express();
@@ -11,16 +11,13 @@ app.use(
   cors({
     origin: "http://localhost:5173",
     credentials: true,
-    methods: ["GET", "POST"],
+    methods: ["GET"],
   }),
 );
 
 app.use(express.json());
 
-app.get("/api", async (req: Request, res: Response) => {
-  const { documents, sites }: any = await data();
-  res.json({ documents, sites });
-});
+app.use("/api", productRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
