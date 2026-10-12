@@ -32,7 +32,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1>You did it!</h1>
+  <div class="header">
+    <div>首页</div>
+    <div>官方文档</div>
+    <div>博客站点</div>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 80px;
+  padding-left: 30px;
+  font-size: large;
+  background-color: #dddfe2;
+}
+</style>
