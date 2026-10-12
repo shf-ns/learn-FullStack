@@ -1,9 +1,21 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 
-const fetchData = async () => {
+const fetchDocumentsData = async () => {
   try {
-    const response = await fetch('/api', {
+    const response = await fetch('/api/documents', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    })
+    const data = await response.json()
+    console.log('接收到的数据:', data)
+  } catch (error) {
+    console.error('请求失败:', error)
+  }
+}
+const fetchSitesData = async () => {
+  try {
+    const response = await fetch('/api/sites', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     })
@@ -14,7 +26,8 @@ const fetchData = async () => {
   }
 }
 onMounted(() => {
-  fetchData()
+  fetchDocumentsData()
+  fetchSitesData()
 })
 </script>
 
