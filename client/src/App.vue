@@ -1,34 +1,35 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { RouterLink, RouterView, useRoute, type RouteLocationNormalizedLoadedGeneric } from 'vue-router'
 
-const route = useRoute()
 
-const fetchDocumentsData = async () => {
+const route: RouteLocationNormalizedLoadedGeneric = useRoute()
+
+const fetchDocumentsData = async (): Promise<void> => {
   try {
-    const response = await fetch('/api/documents', {
+    const response: Response = await fetch('/api/documents', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     })
-    const data = await response.json()
+    const data: any[] = await response.json()
     console.log('接收到的数据:', data)
   } catch (error) {
     console.error('请求失败:', error)
   }
 }
-const fetchSitesData = async () => {
+const fetchSitesData = async (): Promise<void> => {
   try {
-    const response = await fetch('/api/sites', {
+    const response: Response = await fetch('/api/sites', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     })
-    const data = await response.json()
+    const data: any = await response.json()
     console.log('接收到的数据:', data)
   } catch (error) {
     console.error('请求失败:', error)
   }
 }
-onMounted(() => {
+onMounted((): void => {
   fetchDocumentsData()
   fetchSitesData()
 })
