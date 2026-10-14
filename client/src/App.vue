@@ -47,13 +47,23 @@ onMounted(() => {
 
 <style scoped>
 .header {
-  display: flex;
-  align-items: center;
-  gap: 30px;
   width: 100%;
-  height: 80px;
+  height: 70px;
   padding-left: 30px;
   font-size: large;
   background-color: #f3f4f7;
+}
+
+.header a {
+  display: inline-block;
+  height: 100%;
+  margin-right: 40px;
+  line-height: 70px;
+}
+
+.header a:active,
+.header a:focus {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
 }
 </style>
