@@ -49,22 +49,35 @@ onMounted(() => {
 
 <style scoped>
 .header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
   width: 100%;
   height: 70px;
   padding-left: 30px;
-  font-size: large;
   background-color: #f3f4f7;
 }
 
 .header a {
   display: inline-block;
   height: 100%;
-  margin-right: 40px;
   line-height: 70px;
 }
 
 .active {
   color: #007bff;
   border-bottom: 3px solid #007bff;
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 20px;
+    height: 60px;
+    padding-left: 20px;
+  }
+
+  .header a {
+    line-height: 60px;
+  }
 }
 </style>
