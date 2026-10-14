@@ -1,21 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute, type RouteLocationNormalizedLoadedGeneric } from 'vue-router'
 
-
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
-
-const fetchSitesData = async (): Promise<void> => {
-  try {
-    const response: Response = await fetch('/api/sites', {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' }
-    })
-    const data: any = await response.json()
-    console.log('接收到的数据:', data)
-  } catch (error) {
-    console.error('请求失败:', error)
-  }
-}
 
 </script>
 
