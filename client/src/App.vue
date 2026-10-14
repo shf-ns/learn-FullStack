@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const fetchDocumentsData = async () => {
   try {
@@ -35,9 +37,9 @@ onMounted(() => {
 <template>
   <div class="main">
     <div class="header">
-      <RouterLink to="/">首页</RouterLink>
-      <RouterLink to="/document">官方文档</RouterLink>
-      <RouterLink to="/site">博客站点</RouterLink>
+      <RouterLink to="/" :class="{ active: route.path === '/' }">首页</RouterLink>
+      <RouterLink to="/document" :class="{ active: route.path === '/document' }">官方文档</RouterLink>
+      <RouterLink to="/site" :class="{ active: route.path === '/site' }">博客站点</RouterLink>
     </div>
     <div class="content">
       <RouterView></RouterView>
@@ -61,8 +63,7 @@ onMounted(() => {
   line-height: 70px;
 }
 
-.header a:active,
-.header a:focus {
+.active {
   color: #007bff;
   border-bottom: 3px solid #007bff;
 }
