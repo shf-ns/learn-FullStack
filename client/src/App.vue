@@ -35,15 +35,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main">
-    <div class="header">
-      <RouterLink to="/" :class="{ active: route.path === '/' }">首页</RouterLink>
-      <RouterLink to="/document" :class="{ active: route.path === '/document' }">官方文档</RouterLink>
-      <RouterLink to="/site" :class="{ active: route.path === '/site' }">博客站点</RouterLink>
-    </div>
-    <div class="content">
-      <RouterView></RouterView>
-    </div>
+  <div class="header">
+    <RouterLink to="/" :class="{ active: route.path === '/' }">首页</RouterLink>
+    <RouterLink to="/document" :class="{ active: route.path === '/document' }">官方文档</RouterLink>
+    <RouterLink to="/site" :class="{ active: route.path === '/site' }">博客站点</RouterLink>
+  </div>
+  <div class="content" style="flex: 1;">
+    <RouterView></RouterView>
+  </div>
+  <div class="footer">
+    <span>Copyright © 2026 shf-ns 版权所有</span>
   </div>
 </template>
 
@@ -67,6 +68,13 @@ onMounted(() => {
 .active {
   color: #007bff;
   border-bottom: 3px solid #007bff;
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  color: #ccc;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
