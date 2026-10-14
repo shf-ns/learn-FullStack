@@ -33,8 +33,6 @@ export const data: () => Promise<
     const [sites] = await pool.execute(
       "SELECT site.* FROM category, site WHERE category.id = site.category_id AND category_id = 2",
     );
-    console.log(documents);
-    console.log(sites);
 
     return { documents, sites };
   } catch (err) {

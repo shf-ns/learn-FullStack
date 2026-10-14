@@ -1,22 +1,9 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import { RouterLink, RouterView, useRoute, type RouteLocationNormalizedLoadedGeneric } from 'vue-router'
 
 
 const route: RouteLocationNormalizedLoadedGeneric = useRoute()
 
-const fetchDocumentsData = async (): Promise<void> => {
-  try {
-    const response: Response = await fetch('/api/documents', {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' }
-    })
-    const data: any[] = await response.json()
-    console.log('接收到的数据:', data)
-  } catch (error) {
-    console.error('请求失败:', error)
-  }
-}
 const fetchSitesData = async (): Promise<void> => {
   try {
     const response: Response = await fetch('/api/sites', {
@@ -29,10 +16,7 @@ const fetchSitesData = async (): Promise<void> => {
     console.error('请求失败:', error)
   }
 }
-onMounted((): void => {
-  fetchDocumentsData()
-  fetchSitesData()
-})
+
 </script>
 
 <template>
@@ -73,8 +57,9 @@ onMounted((): void => {
 
 .footer {
   width: 100%;
-  height: 70px;
+  padding: 30px 0 20px 0;
   color: #ccc;
+  font-size: small;
   text-align: center;
 }
 
