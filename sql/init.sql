@@ -53,21 +53,21 @@ VALUES
     (
         'Svelte',
         'https://svelte.dev/',
-        'https://svelte.dev/svelte-logo-horizontal.svg',
+        'https://svelte.dev/favicon.png',
         'Svelte 是一个编译型 JavaScript 框架，用于构建快速 Web 应用。',
         1
     ),
     (
         'Node.js',
         'https://nodejs.org/',
-        'https://nodejs.org/static/images/logo.svg',
+        'https://nodejs.org/static/images/favicons/favicon.png',
         'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时。',
         1
     ),
     (
         'Python',
         'https://www.python.org/',
-        'https://www.python.org/static/img/python-logo.png',
+        'https://www.python.org/static/favicon.ico',
         'Python 是一种广泛使用的高级编程语言。',
         1
     ),
@@ -81,14 +81,14 @@ VALUES
     (
         'Go',
         'https://go.dev/',
-        'https://go.dev/images/go-logo-blue.svg',
+        'https://go.dev/images/favicon-gopher.png',
         'Go 是一种静态类型、编译型语言，设计用于构建简单、可靠、高效的软件。',
         1
     ),
     (
         'Rust',
         'https://www.rust-lang.org/',
-        'https://www.rust-lang.org/static/images/rust-logo-blk.svg',
+        'https://rust-lang.org/static/images/favicon.svg',
         'Rust 是一种系统编程语言，注重安全、速度和并发性。',
         1
     ),
@@ -109,14 +109,14 @@ VALUES
     (
         'PHP',
         'https://www.php.net/',
-        'https://www.php.net/images/logos/php-logo.svg',
+        'https://www.php.net/favicon-32x32.png?v=2',
         'PHP 是一种广泛使用的开源通用脚本语言，特别适合 Web 开发。',
         1
     ),
     (
         'Ruby',
         'https://www.ruby-lang.org/',
-        'https://www.ruby-lang.org/images/header-ruby-logo.png',
+        'https://www.ruby-lang.org//favicon.ico',
         'Ruby 是一种动态、开源的编程语言，注重简洁和生产力。',
         1
     ),
@@ -144,21 +144,21 @@ VALUES
     (
         'Django',
         'https://www.djangoproject.com/',
-        'https://www.djangoproject.com/m/img/logos/django-logo-positive.svg',
+        'https://static.djangoproject.com/img/icon-touch.e4872c4da341.png',
         'Django 是一个高级 Python Web 框架，鼓励快速开发和简洁设计。',
         1
     ),
     (
         'Flask',
         'https://flask.palletsprojects.com/',
-        'https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg',
+        'https://flask.palletsprojects.com/en/stable/_static/flask-icon.svg',
         'Flask 是一个轻量级的 Python Web 框架。',
         1
     ),
     (
         'Laravel',
         'https://laravel.com/',
-        'https://laravel.com/img/logomark.min.svg',
+        'https://rubyonrails.org/assets/images/favicon.png',
         'Laravel 是一个用于 Web 开发的 PHP 框架，具有优雅的语法。',
         1
     ),
@@ -197,29 +197,29 @@ VALUES
     (
         'InfoQ 中文',
         'https://www.infoq.cn/',
-        'https://www.infoq.cn/favicon.ico',
+        'https://static001.infoq.cn/static/infoq/www/img/share-default-5tgbiuhgfefgujjhg.png',
         'InfoQ 是一个实践驱动、以社区为中心的技术媒体平台，聚焦架构设计、技术管理及前沿趋势。',
-        22
-    ),
-    (
-        'SegmentFault 思否',
-        'https://segmentfault.com/',
-        'https://segmentfault.com/favicon.ico',
-        'SegmentFault 思否是中国新一代开发者社区和专业的技术媒体，以技术问答、专栏、课程为核心形态。',
         2
     ),
     (
-        '开源中国',
-        'https://www.oschina.net/',
-        'https://www.oschina.net/favicon.ico',
-        '开源中国成立于2008年，是目前中国最大的开源技术社区，收录全球知名开源项目近5万款。',
+        'Google For Developers',
+        'https://developers.google.cn/community?hl=zh-cn',
+        'https://www.gstatic.cn/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/developers/images/favicon-new.png',
+        'Google for Developers是谷歌为开发者提供的官方资源平台',
         2
     ),
     (
-        'V2EX',
-        'https://www.v2ex.com/',
-        'https://www.v2ex.com/favicon.ico',
-        'V2EX 是创意工作者们的社区，汇聚了超过40万名来自互联网、游戏和媒体行业的创意工作者。',
+        '知乎',
+        'https://www.zhihu.com/',
+        'https://static.zhihu.com/heifetz/assets/apple-touch-icon-152.81060cab.png',
+        '知乎，中文互联网高质量的问答社区和创作者聚集的原创内容平台',
+        2
+    ),
+    (
+        'unity',
+        'https://developer.unity.cn/',
+        'https://developer-prd.cdn.unity.cn/images/favicons/favicon_cn.ico?v=3',
+        'Unity User Group（UUG）是 Unity 开发者的专属社区活动',
         2
     ),
     (
@@ -246,14 +246,14 @@ VALUES
     (
         '美团技术团队',
         'https://tech.meituan.com/',
-        'https://tech.meituan.com/favicon.ico',
+        'https://p0.meituan.net/meituantechblog/00c62e57b4c4a1f40b47d7152b3e54b511963.png',
         '美团技术团队官方博客，分享美团在分布式系统、算法、工程实践等方面的技术干货。',
         2
     ),
     (
         'Stack Overflow',
         'https://stackoverflow.com/',
-        'https://stackoverflow.com/favicon.ico',
+        'https://stackoverflow.com/Content/Sites/stackoverflow/Img/apple-touch-icon.png?v=9168b8ec82a5',
         'Stack Overflow 是全球最大的编程问答社区，拥有庞大的用户基础和丰富的问题库，是解决编程难题的首选之地。',
         2
     ),
@@ -265,17 +265,17 @@ VALUES
         2
     ),
     (
-        'Hacker News',
-        'https://news.ycombinator.com/',
-        'https://news.ycombinator.com/favicon.ico',
-        'Hacker News 是计算机黑客和创业公司的社会化新闻网站，以技术讨论和深度评论著称。',
+        'npm',
+        'https://www.npmjs.com/',
+        'https://static-production.npmjs.com/da3ab40fb0861d15c83854c29f5f2962.png',
+        '是 Node.js 的默认 JavaScript 包管理工具，用于安装、管理和共享项目依赖库。',
         2
     ),
     (
-        'Medium',
-        'https://medium.com/',
-        'https://medium.com/favicon.ico',
-        'Medium 是全球最大的独立写作与技术博客平台，汇聚了大量专家撰写的深度技术文章。',
+        '菜鸟教程',
+        'https://www.runoob.com/',
+        'https://www.runoob.com/pwa/icon-192.png',
+        '菜鸟教程是一个面向初学者的免费在线编程技术学习网站，提供多种编程语言和技术的基础教程及在线实例',
         2
     ),
     (
@@ -300,16 +300,16 @@ VALUES
         2
     ),
     (
-        'CodeProject',
-        'https://www.codeproject.com/',
-        'https://www.codeproject.com/favicon.ico',
-        'CodeProject 是全球开发者的宝贵资源，用户可以在社区中分享经验、交流技术，获取各领域开发知识。',
+        'github',
+        'https://github.com/',
+        'https://github.githubassets.com/favicons/favicon.svg',
+        'GitHub 是一个平台，支持整个软件开发过程，从规划工作到部署和操作软件。 GitHub 是用于构建软件的平台',
         2
     ),
     (
         'DZone',
         'https://dzone.com/',
-        'https://dzone.com/favicon.ico',
+        'https://dz2cdn1.dzone.com/themes/dz20/images/favicon.png',
         'DZone 是世界上最大的在线开发者社区之一，涵盖编程、架构、DevOps、大数据等技术领域。',
         2
     );
