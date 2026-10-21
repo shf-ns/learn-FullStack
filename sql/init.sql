@@ -1,24 +1,26 @@
-CREATE SCHEMA link;
+SET NAMES utf8mb4;
+
+CREATE SCHEMA link CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 USE link;
 
 CREATE TABLE
     category (
         id int AUTO_INCREMENT PRIMARY KEY,
-        name varchar(225) NOT NULL COMMENT '名称',
-        description varchar(225) NOT NULL COMMENT '描述'
-    ) COMMENT '类别';
+        name varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '名称',
+        description varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '描述'
+    ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '类别';
 
 CREATE TABLE
     site (
         id int AUTO_INCREMENT PRIMARY KEY,
-        name varchar(225) NOT NULL COMMENT '名称',
+        name varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '名称',
         url varchar(225) NOT NULL COMMENT '地址',
         icon varchar(225) NOT NULL COMMENT '图标',
-        description varchar(225) NOT NULL COMMENT '地址',
+        description varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '地址',
         category_id int NOT NULL,
         CONSTRAINT site_category_id_fk FOREIGN KEY (category_id) REFERENCES category (id)
-    ) COMMENT '位置';
+    ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '位置';
 
 INSERT INTO
     category (name, description)
